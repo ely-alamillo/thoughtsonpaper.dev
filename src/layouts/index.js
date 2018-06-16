@@ -16,11 +16,10 @@ const Layout = ({ children, data }) => (
     />
     <Header siteTitle={data.site.siteMetadata.title} />
 
-    <section className="section">
-      <div className="container">
-        {children()}
-      </div>
-    </section>
+    {/* <div className="section">
+      <div className="container">{children()}</div>
+    </div> */}
+    {children()}
   </div>
 )
 

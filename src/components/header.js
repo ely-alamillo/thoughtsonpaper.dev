@@ -1,11 +1,23 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import './header.scss'
+
 const Header = ({ siteTitle }) => (
   <nav className="navbar" role="navigation" aria-label="main navigation">
     <div className="container">
       <div className="navbar-brand">
-        <h2>{siteTitle}</h2>
+        <div className="navbar-item">
+          <a>
+            <img
+              src="https://bulma.io/images/bulma-logo.png"
+              alt="Bulma: a modern CSS framework based on Flexbox"
+              width="112"
+              height="28"
+            />
+          </a>
+        </div>
+        {/* <h2>{siteTitle}</h2> */}
         <a
           role="button"
           className="navbar-burger"
@@ -40,19 +52,3 @@ const Header = ({ siteTitle }) => (
 )
 
 export default Header
-
-{
-  /* < nav
-className = "navbar is-primary"
-role = "navigation"
-aria - label="main navigation"    
-  >
-  <div className="container">
-    <div className="navbar-brand">
-      <Link className="navbar-item" to="/">
-        {siteTitle}
-      </Link>
-    </div>
-  </div>
-  </nav >  */
-}
