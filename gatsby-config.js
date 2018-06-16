@@ -4,6 +4,6 @@ module.exports = {
     siteUrl: 'https://www.elyalamillo.com',
     description: 'My creative outlet',
   },
-  pathPrefix: '',
+  pathPrefix: '/',
   plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-sass'],
 }
