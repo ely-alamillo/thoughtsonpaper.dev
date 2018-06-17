@@ -1,5 +1,6 @@
 import React from 'react'
 import image from '../img/hero.png'
+import profile from '../img/profile.png'
 import './hero.scss'
 
 const Hero = () => (
@@ -14,7 +15,7 @@ const Hero = () => (
             <h2 className="subtitle is-size-4-desktop">
               I code beautiful sites and I love what I do.
             </h2>
-            <img src="" alt="logo" />
+            <img src={profile} alt="logo" width="150" />
           </div>
         </div>
       </div>
