@@ -5,6 +5,7 @@ import Hero from '../components/hero'
 import AboutMe from '../components/aboutMe'
 import Skills from '../components/skills'
 import RecentWork from '../components/recentWork'
+import Contact from '../components/contact'
 
 const IndexPage = () => (
   <div>
@@ -12,6 +13,7 @@ const IndexPage = () => (
     <AboutMe />
     <Skills />
     <RecentWork />
+    <Contact />
   </div>
 )
 
