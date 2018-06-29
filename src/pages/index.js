@@ -6,6 +6,7 @@ import AboutMe from '../components/aboutMe'
 import Skills from '../components/skills'
 import RecentWork from '../components/recentWork'
 import Contact from '../components/contact'
+import Footer from '../components/footer'
 
 const IndexPage = () => (
   <div>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <Skills />
     <RecentWork />
     <Contact />
+    <Footer />
   </div>
 )
 
