@@ -6,7 +6,7 @@ const Footer = () => (
   <footer className="footer has-background-primary has-text-centered">
     <div className="container">
       <a href="#">
-        <span className="icon fa-lg is-large">
+        <span className="icon fa-lg is-large social-icon">
           <span className="fa-stack">
             <i className="fas fa-circle fa-stack-2x" />
             <i className="fab fa-linkedin-in fa-stack-1x fa-inverse" />
