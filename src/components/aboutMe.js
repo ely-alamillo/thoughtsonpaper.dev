@@ -1,7 +1,10 @@
 import React from 'react'
 
 const AboutMe = () => (
-  <section className="section is-medium has-text-centered has-background-info">
+  <section
+    className="section is-medium has-text-centered has-background-info"
+    id="about"
+  >
     <div className="container">
       <div className="columns">
         <div className="column is-three-fifths">

@@ -3,7 +3,10 @@ import comingSoon from '../img/coming-soon.jpg'
 import './recentWork.scss'
 
 const RecentWork = () => (
-  <section className="section projects has-text-centered has-background-info">
+  <section
+    className="section projects has-text-centered has-background-info"
+    id="recentWork"
+  >
     <div className="container">
       <h1 className="is-size-3-desktop is-size-4-mobile">My recent Projects</h1>
       <h2 className="subtitle is-size-5-desktop">

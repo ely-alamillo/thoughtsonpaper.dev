@@ -1,8 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { NavLink } from 'react-router-dom'
 
 import './header.scss'
 
+const closeNav = () => {
+  document.querySelector('.navbar-menu').classList.toggle('is-active')
+}
 const Header = ({ siteTitle }) => (
   <nav className="navbar" role="navigation" aria-label="main navigation">
     <div className="container">
@@ -37,13 +41,13 @@ const Header = ({ siteTitle }) => (
       <div className="navbar-menu" id="navMenu">
         <div className="navbar-end">
           <div className="navbar-item">
-            <Link to="#">About</Link>
+            <Link to="/#about">About</Link>
           </div>
           <div className="navbar-item">
-            <Link to="#">Projects</Link>
+            <Link to="/#recentWork">Recent Work</Link>
           </div>
           <div className="navbar-item">
-            <Link to="#">Contact</Link>
+            <Link to="/#contact">Contact</Link>
           </div>
         </div>
       </div>

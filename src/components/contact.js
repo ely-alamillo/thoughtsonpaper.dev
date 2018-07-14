@@ -3,7 +3,7 @@ import React from 'react'
 import './contact.scss'
 
 const Contact = () => (
-  <section className="section has-background-white">
+  <section className="section has-background-white" id="contact">
     <div className="container">
       <form action="https://formspree.io/ely0013@gmail.com" method="POST">
         <div className="field">
