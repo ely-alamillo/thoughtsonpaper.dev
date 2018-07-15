@@ -3,6 +3,7 @@ import './skills.scss'
 
 const Skills = () => (
   <section className="section has-text-centered has-background-success">
+    <h1 className="title">Skills.</h1>
     <div className="container">
       <div className="box is-paddingless">
         <div className="content">
