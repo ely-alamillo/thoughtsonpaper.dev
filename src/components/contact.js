@@ -6,7 +6,7 @@ const Contact = () => (
   <section className="section has-background-white" id="contact">
     <div className="container">
       <form action="https://formspree.io/ely0013@gmail.com" method="POST">
-        <div className="field">
+        {/* <div className="field">
           <label className="label">Name</label>
           <div className="control has-icons-left">
             <input
@@ -19,26 +19,44 @@ const Contact = () => (
               <i className="fa fa-user-alt" />
             </span>
           </div>
-        </div>
+        </div> */}
 
-        <div className="field">
-          <label className="label">Email</label>
-          <div className="control has-icons-left">
-            <input
-              className="input"
-              type="email"
-              placeholder="Email input"
-              name="_replyto"
-            />
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Submission @ elyalamillo.com"
-            />
-            <input type="text" name="_gotcha" style={{ display: 'none' }} />
-            <span className="icon is-small is-left">
-              <i className="fa fa-envelope" />
-            </span>
+        <div className="field is-horizontal">
+          <div className="field-body">
+            <div className="field">
+              <label className="label">Name</label>
+              <p className="control is-expanded has-icons-left">
+                <input
+                  className="input"
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                />
+                <span className="icon is-small is-left">
+                  <i className="fas fa-user" />
+                </span>
+              </p>
+            </div>
+            <div className="field">
+              <label className="label">Email</label>
+              <div className="control has-icons-left">
+                <input
+                  className="input"
+                  type="email"
+                  placeholder="Email input"
+                  name="_replyto"
+                />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Submission @ elyalamillo.com"
+                />
+                <input type="text" name="_gotcha" style={{ display: 'none' }} />
+                <span className="icon is-small is-left">
+                  <i className="fa fa-envelope" />
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 

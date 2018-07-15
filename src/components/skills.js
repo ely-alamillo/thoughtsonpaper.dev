@@ -41,7 +41,7 @@ const Skills = () => (
               </p>
               <p>Vscode, Mlab, JS Debugger</p>
             </div>
-            <div className="column skills-section">
+            <div className="column skills-section last">
               <h1>Backend</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
