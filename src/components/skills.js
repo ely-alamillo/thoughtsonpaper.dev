@@ -25,7 +25,7 @@ const Skills = () => (
               <p>Vscode, Mlab, JS Debugger</p>
             </div>
             <div className="column skills-section">
-              <h1>Backend</h1>
+              <h1>Frontend</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
                 sed dignissimos corporis reiciendis architecto voluptas at nemo
@@ -33,16 +33,16 @@ const Skills = () => (
                 repellat assumenda voluptate quis.
               </p>
               <p className="has-text-weight-semibold has-text-link">
-                Backend tech I use:
+                Frontend tech I use:
               </p>
               <p>Node, Express, MySql</p>
               <p className="has-text-weight-semibold has-text-link">
-                Backend Tools:
+                Frontend Tools:
               </p>
               <p>Vscode, Mlab, JS Debugger</p>
             </div>
             <div className="column skills-section last">
-              <h1>Backend</h1>
+              <h1>Mentor</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
                 sed dignissimos corporis reiciendis architecto voluptas at nemo
@@ -50,11 +50,11 @@ const Skills = () => (
                 repellat assumenda voluptate quis.
               </p>
               <p className="has-text-weight-semibold has-text-link">
-                Backend tech I use:
+                Where I've mentored:
               </p>
-              <p>Node, Express, MySql</p>
+              <p>Lambda School</p>
               <p className="has-text-weight-semibold has-text-link">
-                Backend Tools:
+                Mentor stats:
               </p>
               <p>Vscode, Mlab, JS Debugger</p>
             </div>
