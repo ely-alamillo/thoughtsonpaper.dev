@@ -4,23 +4,9 @@ import './contact.scss'
 
 const Contact = () => (
   <section className="section has-background-white" id="contact">
+    <h1 className="title has-text-centered">Contact Me.</h1>
     <div className="container">
       <form action="https://formspree.io/ely0013@gmail.com" method="POST">
-        {/* <div className="field">
-          <label className="label">Name</label>
-          <div className="control has-icons-left">
-            <input
-              className="input"
-              type="text"
-              placeholder="Name input"
-              name="name"
-            />
-            <span className="icon is-small is-left">
-              <i className="fa fa-user-alt" />
-            </span>
-          </div>
-        </div> */}
-
         <div className="field is-horizontal">
           <div className="field-body">
             <div className="field">
