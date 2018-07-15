@@ -1,3 +1,17 @@
-.skills-section {
-  border-bottom: 1px solid lightgray;
+.box {
+  box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
+
+  .column.skills-section {
+    padding: 50px 30px;
+    border-bottom: 1px solid #e6ecf8;
+    border-right: 0px solid #e6ecf8;
+  }
+
+  @media screen and (min-width: 769px) {
+    .column.skills-section {
+      padding: 60px 40px;
+      border-bottom: 0px solid #e6ecf8;
+      border-right: 1px solid #e6ecf8;
+    }
+  }
 }

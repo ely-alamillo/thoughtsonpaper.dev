@@ -4,7 +4,7 @@ import './skills.scss'
 const Skills = () => (
   <section className="section has-text-centered has-background-success">
     <div className="container">
-      <div className="box">
+      <div className="box is-paddingless">
         <div className="content">
           <div className="columns has-text-center">
             <div className="column skills-section">
@@ -41,7 +41,7 @@ const Skills = () => (
               </p>
               <p>Vscode, Mlab, JS Debugger</p>
             </div>
-            <div className="column">
+            <div className="column skills-section">
               <h1>Backend</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
