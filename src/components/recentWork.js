@@ -8,7 +8,9 @@ const RecentWork = () => (
     id="recentWork"
   >
     <div className="container">
-      <h1 className="is-size-3-desktop is-size-4-mobile">My recent Projects</h1>
+      <h1 className="is-size-2-desktop is-size-3-mobile title">
+        Recent Projects.
+      </h1>
       <h2 className="subtitle is-size-5-desktop">
         Here are some of my most recent projects.
       </h2>
@@ -34,10 +36,10 @@ const RecentWork = () => (
                   )[0].style.opacity = 0)
                 }
               >
-                <h1 className="title is-size-5 is-size-4-widescreen">
-                  some random sentence that just has to be pretty long so i know
-                  its working how i want it to.
-                </h1>
+                <h1 className="title is-size-5 is-size-4-widescreen">Bitsy.</h1>
+                <p className="subtitle">
+                  Use Bitsy for all your URL shortening needs.
+                </p>
                 <a
                   href=""
                   className="button is-primary is-outlined is-rounded"
@@ -72,9 +74,11 @@ const RecentWork = () => (
                 }
               >
                 <h1 className="title is-size-5 is-size-4-widescreen">
-                  some random sentence that just has to be pretty long so i know
-                  its working how i want it to.
+                  Speech Trainer
                 </h1>
+                <p className="subtitle">
+                  Speech Trainer was built to help you speak better english.
+                </p>
                 <a
                   href=""
                   className="button is-primary is-outlined is-rounded"
@@ -108,16 +112,17 @@ const RecentWork = () => (
                 }
               >
                 <h1 className="title is-size-5 is-size-4-widescreen">
-                  some random sentence that just has to be pretty long so i know
-                  its working how i want it to.
+                  Jobbie.
                 </h1>
+                <p className="subtitle">
+                  Jobbie will help you land the perfect
+                </p>
                 <a
                   href=""
                   className="button is-primary is-outlined is-rounded"
                   target="_blank"
                 >
                   <span>Visit Project</span>
-                  <span className="icon" />
                 </a>
               </figcaption>
               <div className="overlay" />
