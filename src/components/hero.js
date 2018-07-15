@@ -1,6 +1,6 @@
 import React from 'react'
-import image from '../img/hero.png'
 import profile from '../img/profile.png'
+import desk from '../img/hero-desk.png'
 import './hero.scss'
 
 const Hero = () => (
@@ -10,7 +10,7 @@ const Hero = () => (
         <div className="columns is-centered">
           <div className="column">
             <h1 className="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">
-              Ely Alamillo
+              Software Developer.
             </h1>
             <h2 className="subtitle is-size-4-desktop">
               I code beautiful sites and I love what I do.
@@ -22,7 +22,7 @@ const Hero = () => (
     </div>
     <div className="hero-foot">
       <div className="container">
-        {/* <img className="is-bottom" src={image} alt="Hero Image" /> */}
+        <img className="is-bottom desk-img" src={desk} alt="Desk Image" />
       </div>
     </div>
   </section>
