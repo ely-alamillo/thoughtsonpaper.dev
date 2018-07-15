@@ -46,3 +46,7 @@ Taken from https://bulma.io/documentation/overview/customize/
 
 // 6. Import the rest of Bulma
 @import '~bulma/bulma.sass';
+
+.title {
+  font-weight: 800;
+}
