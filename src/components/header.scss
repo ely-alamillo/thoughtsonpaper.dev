@@ -1,3 +1,17 @@
 .navbar {
   padding: 1.2rem 0;
+
+  & > .container {
+    padding: 0 10px;
+  }
+}
+
+.navbar-item img {
+  max-height: 3rem !important;
+  height: 52px !important;
+  width: 52px !important;
+}
+
+a.navbar-burger {
+  height: auto;
 }

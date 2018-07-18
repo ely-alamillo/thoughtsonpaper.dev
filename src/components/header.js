@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { NavLink } from 'react-router-dom'
+import logo from '../img/logo.svg'
 
 import './header.scss'
 
@@ -11,16 +11,16 @@ const Header = ({ siteTitle }) => (
   <nav className="navbar" role="navigation" aria-label="main navigation">
     <div className="container">
       <div className="navbar-brand">
-        <div className="navbar-item">
-          <a>
-            <img
-              src="https://bulma.io/images/bulma-logo.png"
-              alt="Bulma: a modern CSS framework based on Flexbox"
-              width="112"
-              height="28"
-            />
-          </a>
-        </div>
+        <a className="navbar-item">
+          <img
+            src={logo}
+            alt="Ely Alamillo"
+            width="52"
+            height="52"
+            style={{ width: '52px', height: '52px' }}
+          />
+        </a>
+
         {/* <h2>{siteTitle}</h2> */}
         <a
           role="button"
