@@ -28,10 +28,10 @@ const Skills = () => (
                 <li>MongoDB</li>
                 <li>MySQL</li>
               </ul>
-              <p className="has-text-weight-semibold has-text-link">
+              {/* <p className="has-text-weight-semibold has-text-link">
                 Backend Tools:
               </p>
-              <p>Mongoose, Digital Ocean, Mlab.</p>
+              <p>Mongoose, Digital Ocean, Mlab.</p> */}
             </div>
             <div className="column skills-section">
               <h1>Frontend</h1>
@@ -49,16 +49,16 @@ const Skills = () => (
                 <li>Bulma</li>
                 <li>Bootsrap</li>
               </ul>
-              <p className="has-text-weight-semibold has-text-link">
+              {/* <p className="has-text-weight-semibold has-text-link">
                 Frontend Tools:
               </p>
-              <p>VS Code,</p>
+              <p>VS Code,</p> */}
             </div>
             <div className="column skills-section last">
               <h1>Mentor</h1>
               <p>
                 I'm a big fan of giving back to the community and mentor those
-                who are ready to learn more.
+                who seek more.
               </p>
               <p className="has-text-weight-semibold has-text-link">
                 Where I've mentored:
@@ -67,10 +67,10 @@ const Skills = () => (
                 <li>Lambda School</li>
                 <li>Javascript Developers</li>
               </ul>
-              <p className="has-text-weight-semibold has-text-link">
+              {/* <p className="has-text-weight-semibold has-text-link">
                 Mentor stats:
               </p>
-              <p>Vscode, Mlab, JS Debugger</p>
+              <p>Vscode, Mlab, JS Debugger</p> */}
             </div>
           </div>
         </div>

@@ -3,37 +3,32 @@ import React from 'react'
 import './footer.scss'
 
 const Footer = () => (
-  <footer className="footer has-background-primary has-text-centered">
+  <div className="footer has-background-white-ter">
     <div className="container">
-      <a href="#">
-        <span className="icon fa-lg is-large social-icon">
-          <span className="fa-stack">
-            <i className="fas fa-circle fa-stack-2x" />
-            <i className="fab fa-linkedin-in fa-stack-1x fa-inverse" />
-          </span>
-        </span>
-      </a>
-      <a href="#">
-        <span className="icon fa-lg is-large">
-          <span className="fa-stack">
-            <i className="fas fa-circle fa-stack-2x" />
-            <i className="fab fa-github fa-stack-1x fa-inverse" />
-          </span>
-        </span>
-      </a>
-      <a href="#">
-        <span className="icon fa-lg is-large">
-          <span className="fa-stack">
-            <i className="fas fa-circle fa-stack-2x" />
-            <i className="fas fa-envelope fa-stack-1x fa-inverse" />
-          </span>
-        </span>
-      </a>
-      <div>
-        <p>{new Date().getFullYear()} Ely Alamillo</p>
+      <div className="has-text-centered">
+        <div className="nav-center">
+          <a className="nav-item">
+            <span className="icon is-large">
+              <i className="fab fa-github fa-2x" />
+            </span>
+          </a>
+          <a className="nav-item">
+            <span className="icon is-large">
+              <i className="fab fa-linkedin fa-2x" />
+            </span>
+          </a>
+          <a className="nav-item">
+            <span className="icon is-large">
+              <i className="fas fa-envelope fa-2x" />
+            </span>
+          </a>
+        </div>
+        <p>
+          &copy; {new Date().getFullYear()} Ely Alamillo | All Rights Reserved.
+        </p>
       </div>
     </div>
-  </footer>
+  </div>
 )
 
 export default Footer
