@@ -8,7 +8,7 @@ const RecentWork = () => (
     id="recentWork"
   >
     <div className="container">
-      <h1 className="is-size-2-desktop is-size-3-mobile title">
+      <h1 className="is-size-1-desktop is-size-2-tablet is-size-3-mobile title">
         Recent Projects.
       </h1>
       <h2 className="subtitle is-size-5-desktop">

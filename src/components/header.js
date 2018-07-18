@@ -44,6 +44,9 @@ const Header = ({ siteTitle }) => (
             <Link to="/#about">About</Link>
           </div>
           <div className="navbar-item">
+            <Link to="/#skills">Skills</Link>
+          </div>
+          <div className="navbar-item">
             <Link to="/#recentWork">Recent Work</Link>
           </div>
           <div className="navbar-item">
