@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
+import favicon from '../img/favicon-png.png'
 import './index.scss'
 
 const Layout = ({ children, data }) => (
@@ -13,6 +14,7 @@ const Layout = ({ children, data }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
+      link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
 
