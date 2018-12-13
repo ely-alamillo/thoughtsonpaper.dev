@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
-import favicon from '../img/favicon-png.png'
+// import favicon from '../img/favicon-png.png'
+import favicon from '../img/favicon-real.svg'
 import './index.scss'
 
 const Layout = ({ children, data }) => (
