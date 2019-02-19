@@ -1,8 +1,14 @@
+@import '../theme.scss';
+
 .navbar {
   padding: 1.2rem 0;
 
   & > .container {
     padding: 0 10px;
+  }
+
+  a:hover {
+    border-bottom: 1px solid $link;
   }
 }
 
