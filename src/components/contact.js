@@ -3,7 +3,7 @@ import React from 'react'
 import './contact.scss'
 
 const Contact = () => (
-  <section className="section has-background-white" id="contact">
+  <section className="section has-background-white  is-medium" id="contact">
     <h1 className="title has-text-centered is-size-1-desktop is-size-2-tablet is-size-3-mobile">
       Contact Me.
     </h1>

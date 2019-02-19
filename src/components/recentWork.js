@@ -4,7 +4,7 @@ import './recentWork.scss'
 
 const RecentWork = () => (
   <section
-    className="section projects has-text-centered has-background-info"
+    className="section projects has-text-centered has-background-info is-medium"
     id="recentWork"
   >
     <div className="container">

@@ -21,8 +21,8 @@ const AboutMe = () => (
             <br />
             <br />
             I love building things. On my spare time I tend to work on side
-            projects, or catch a good book. If you'd like to pick my brain about
-            anything feel free to contact me!
+          projects, or catch a good book. If you'd like to pick my brain about
+          anything feel free to contact me!
           </h2>
         </div>
       </div>
