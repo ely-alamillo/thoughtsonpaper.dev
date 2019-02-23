@@ -1,7 +1,15 @@
-ul {
-  &.card-list {
-    list-style: none;
-    margin-left: 0px;
-    box-shadow: none;
+@import '../theme.scss';
+
+.box {
+  border-top: 0.5em solid $info;
+  box-shadow: 0 10px 20px 0 hsla(0, 0%, 0%, 0.2);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  ul {
+    &.card-list {
+      list-style: none;
+      margin-left: 0px;
+      box-shadow: none;
+    }
   }
 }
