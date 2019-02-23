@@ -8,10 +8,10 @@ const RecentWork = () => (
     id="recentWork"
   >
     <div className="container">
-      <h1 className="is-size-1-desktop is-size-2-tablet is-size-3-mobile title">
+      <h1 className="is-size-1-desktop is-size-2-tablet is-size-3-mobile title has-text-white">
         Recent Projects.
       </h1>
-      <h2 className="subtitle is-size-5-desktop">
+      <h2 className="subtitle is-size-5-desktop has-text-white">
         Here are some of my most recent projects.
       </h2>
       <div className="project-grid">
@@ -27,26 +27,27 @@ const RecentWork = () => (
 
                   document.querySelectorAll(
                     '.projects .project-grid figcaption'
-                  )[0].style.backgroundColor =
-                    'red'
+                  )[0].style.backgroundColor = 'rgba(56, 60, 62, 0.9)'
                 }}
-                onMouseLeave={() =>
-                  (document.querySelectorAll(
+                onMouseLeave={() => {
+                  document.querySelectorAll(
                     '.projects .project-grid figcaption'
-                  )[0].style.opacity = 0)
-                }
+                  )[0].style.opacity = 0
+                }}
               >
-                <h1 className="title is-size-5 is-size-4-widescreen">Bitsy.</h1>
-                <p className="subtitle">
+                <h1 className="title is-size-5 is-size-4-widescreen has-text-white">
+                  Bitsy
+                </h1>
+                <p className="subtitle has-text-white">
                   Use Bitsy for all your URL shortening needs.
                 </p>
                 <a
                   href=""
-                  className="button is-primary is-outlined is-rounded"
+                  className="button is-info is-rounded"
                   target="_blank"
                 >
                   <span>Visit Project</span>
-                  <span className="icon" />
+                  {/* <span className="icon" /> */}
                 </a>
               </figcaption>
               <div className="overlay" />
@@ -64,8 +65,7 @@ const RecentWork = () => (
 
                   document.querySelectorAll(
                     '.projects .project-grid figcaption'
-                  )[1].style.backgroundColor =
-                    'red'
+                  )[1].style.backgroundColor = 'rgba(56, 60, 62, 0.9)'
                 }}
                 onMouseLeave={() =>
                   (document.querySelectorAll(
@@ -73,15 +73,15 @@ const RecentWork = () => (
                   )[1].style.opacity = 0)
                 }
               >
-                <h1 className="title is-size-5 is-size-4-widescreen">
+                <h1 className="title is-size-5 is-size-4-widescreen has-text-white">
                   Speech Trainer
                 </h1>
-                <p className="subtitle">
+                <p className="subtitle has-text-white">
                   Speech Trainer was built to help you speak better english.
                 </p>
                 <a
                   href=""
-                  className="button is-primary is-outlined is-rounded"
+                  className="button is-info is-rounded"
                   target="_blank"
                 >
                   <span>Visit Project</span>
@@ -102,8 +102,7 @@ const RecentWork = () => (
 
                   document.querySelectorAll(
                     '.projects .project-grid figcaption'
-                  )[2].style.backgroundColor =
-                    'red'
+                  )[2].style.backgroundColor = 'rgba(56, 60, 62, 0.9)'
                 }}
                 onMouseLeave={() =>
                   (document.querySelectorAll(
@@ -111,18 +110,18 @@ const RecentWork = () => (
                   )[2].style.opacity = 0)
                 }
               >
-                <h1 className="title is-size-5 is-size-4-widescreen">
-                  Jobbie.
+                <h1 className="title is-size-5 is-size-4-widescreen has-text-white">
+                  Jobbie
                 </h1>
-                <p className="subtitle">
+                <p className="subtitle has-text-white">
                   Jobbie will help you land the perfect
                 </p>
                 <a
                   href=""
-                  className="button is-primary is-outlined is-rounded"
+                  className="button is-info is-rounded"
                   target="_blank"
                 >
-                  <span>Visit Project</span>
+                  <span className="has-text-info">Visit Project</span>
                 </a>
               </figcaption>
               <div className="overlay" />
