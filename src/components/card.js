@@ -2,20 +2,28 @@ import React from 'react'
 
 import './card.scss'
 
-const Card = ({ title }) => (
+const Card = ({ title, subHeader, techHeader, stack, toolsHeader, tools }) => (
   <div className="box">
-    <header >
-      <p className="title">
-        {title}
-      </p>
+    <header>
+      <h1 className="title">{title}</h1>
+      <p>{subHeader}</p>
     </header>
     <div className="card-content">
       <div className="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-      <a href="#">#css</a> <a href="#">#responsive</a>
-        <br />
-        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+        <p className="has-text-weight-semibold has-text-link">{techHeader}:</p>
+        <ul className="card-list has-text-centered">
+          {stack.map(name => (
+            <li>{name}</li>
+          ))}
+        </ul>
+        {toolsHeader && (
+          <div>
+            <p className="has-text-weight-semibold has-text-link">
+              {toolsHeader}:
+            </p>
+            <p>{tools}</p>
+          </div>
+        )}
       </div>
     </div>
   </div>

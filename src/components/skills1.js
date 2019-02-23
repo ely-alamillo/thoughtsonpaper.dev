@@ -21,7 +21,7 @@ const Skills1 = () => (
               </p>
               <p className="has-text-weight-semibold has-text-link">
                 Backend tech I use:
-               </p>
+              </p>
               <ul className="list has-text-centered">
                 <li>Node</li>
                 <li>Express</li>
