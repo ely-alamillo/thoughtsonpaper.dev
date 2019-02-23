@@ -32,7 +32,7 @@ const Skills1 = () => {
   ]
   return (
     <section
-      className="section has-text-centered has-background-success is-medium"
+      className="section has-text-centered has-background-white is-medium"
       id="skills"
     >
       <h1 className="title is-size-1-desktop is-size-2-tablet is-size-3-mobile">
@@ -42,7 +42,7 @@ const Skills1 = () => {
         <div className="columns">
           {skillsData.map(card => {
             return (
-              <div className="column is-flex is-one-third">
+              <div className="column is-flex-custom is-one-third">
                 <Card {...card} />
               </div>
             )
