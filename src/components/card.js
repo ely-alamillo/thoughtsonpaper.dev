@@ -12,8 +12,8 @@ const Card = ({ title, subHeader, techHeader, stack, toolsHeader, tools }) => (
       <div className="content">
         <p className="has-text-weight-semibold has-text-info">{techHeader}:</p>
         <ul className="card-list has-text-centered">
-          {stack.map(name => (
-            <li>{name}</li>
+          {stack.map((name, idx) => (
+            <li key={idx}>{name}</li>
           ))}
         </ul>
         {toolsHeader && (

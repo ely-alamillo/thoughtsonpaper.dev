@@ -40,9 +40,9 @@ const Skills1 = () => {
       </h1>
       <div className="container">
         <div className="columns">
-          {skillsData.map(card => {
+          {skillsData.map((card, idx) => {
             return (
-              <div className="column is-flex-custom is-one-third">
+              <div className="column is-flex-custom is-one-third" key={idx}>
                 <Card {...card} />
               </div>
             )
