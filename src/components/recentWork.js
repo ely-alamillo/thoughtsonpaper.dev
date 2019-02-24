@@ -63,16 +63,16 @@ const RecentWork = () => (
                 onMouseEnter={() => {
                   document.querySelectorAll(
                     '.projects .project-grid figcaption'
-                  )[2].style.opacity = 1
+                  )[1].style.opacity = 1
 
                   document.querySelectorAll(
                     '.projects .project-grid figcaption'
-                  )[2].style.backgroundColor = 'rgba(56, 60, 62, 0.9)'
+                  )[1].style.backgroundColor = 'rgba(56, 60, 62, 0.9)'
                 }}
                 onMouseLeave={() =>
                   (document.querySelectorAll(
                     '.projects .project-grid figcaption'
-                  )[2].style.opacity = 0)
+                  )[1].style.opacity = 0)
                 }
               >
                 <h1 className="title is-size-5 is-size-4-widescreen has-text-white">
@@ -100,16 +100,16 @@ const RecentWork = () => (
                 onMouseEnter={() => {
                   document.querySelectorAll(
                     '.projects .project-grid figcaption'
-                  )[1].style.opacity = 1
+                  )[2].style.opacity = 1
 
                   document.querySelectorAll(
                     '.projects .project-grid figcaption'
-                  )[1].style.backgroundColor = 'rgba(56, 60, 62, 0.9)'
+                  )[2].style.backgroundColor = 'rgba(56, 60, 62, 0.9)'
                 }}
                 onMouseLeave={() =>
                   (document.querySelectorAll(
                     '.projects .project-grid figcaption'
-                  )[1].style.opacity = 0)
+                  )[2].style.opacity = 0)
                 }
               >
                 <h1 className="title is-size-5 is-size-4-widescreen has-text-white">

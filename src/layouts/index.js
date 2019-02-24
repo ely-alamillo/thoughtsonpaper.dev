@@ -15,7 +15,7 @@ const Layout = ({ children, data }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
-      link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
+      link={[{ rel: 'shortcut icon', type: 'image/svg', href: `${favicon}` }]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
     {children()}
