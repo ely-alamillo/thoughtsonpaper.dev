@@ -1,5 +1,7 @@
 import React from 'react'
-import comingSoon from '../img/coming-soon.jpg'
+import speechTrainer from '../img/speechTrainer.png'
+import urlShortener from '../img/urlShortener.png'
+import jobbie from '../img/jobbie.png'
 import './recentWork.scss'
 
 const RecentWork = () => (
@@ -18,7 +20,7 @@ const RecentWork = () => (
         <div className="columns is-multiline is-mobile">
           <div className="column is-12-mobile is-half-tablet is-one-third-desktop">
             <figure className="image is-3by2">
-              <img src={comingSoon} alt="project" />
+              <img src={urlShortener} alt="project" />
               <figcaption
                 onMouseEnter={() => {
                   document.querySelectorAll(
@@ -56,7 +58,44 @@ const RecentWork = () => (
 
           <div className="column is-12-mobile is-half-tablet is-one-third-desktop">
             <figure className="image is-3by2">
-              <img src={comingSoon} alt="project" />
+              <img src={jobbie} alt="project" />
+              <figcaption
+                onMouseEnter={() => {
+                  document.querySelectorAll(
+                    '.projects .project-grid figcaption'
+                  )[2].style.opacity = 1
+
+                  document.querySelectorAll(
+                    '.projects .project-grid figcaption'
+                  )[2].style.backgroundColor = 'rgba(56, 60, 62, 0.9)'
+                }}
+                onMouseLeave={() =>
+                  (document.querySelectorAll(
+                    '.projects .project-grid figcaption'
+                  )[2].style.opacity = 0)
+                }
+              >
+                <h1 className="title is-size-5 is-size-4-widescreen has-text-white">
+                  Jobbie
+                </h1>
+                <p className="subtitle has-text-white">
+                  Jobbie will help you land the perfect
+                </p>
+                <a
+                  href=""
+                  className="button is-info is-rounded"
+                  target="_blank"
+                >
+                  <span className="has-text-white">Visit Project</span>
+                </a>
+              </figcaption>
+              <div className="overlay" />
+            </figure>
+          </div>
+
+          <div className="column is-12-mobile is-half-tablet is-one-third-desktop">
+            <figure className="image is-3by2">
+              <img src={speechTrainer} alt="project" />
               <figcaption
                 onMouseEnter={() => {
                   document.querySelectorAll(
@@ -85,43 +124,6 @@ const RecentWork = () => (
                   target="_blank"
                 >
                   <span>Visit Project</span>
-                </a>
-              </figcaption>
-              <div className="overlay" />
-            </figure>
-          </div>
-
-          <div className="column is-12-mobile is-half-tablet is-one-third-desktop">
-            <figure className="image is-3by2">
-              <img src={comingSoon} alt="project" />
-              <figcaption
-                onMouseEnter={() => {
-                  document.querySelectorAll(
-                    '.projects .project-grid figcaption'
-                  )[2].style.opacity = 1
-
-                  document.querySelectorAll(
-                    '.projects .project-grid figcaption'
-                  )[2].style.backgroundColor = 'rgba(56, 60, 62, 0.9)'
-                }}
-                onMouseLeave={() =>
-                  (document.querySelectorAll(
-                    '.projects .project-grid figcaption'
-                  )[2].style.opacity = 0)
-                }
-              >
-                <h1 className="title is-size-5 is-size-4-widescreen has-text-white">
-                  Jobbie
-                </h1>
-                <p className="subtitle has-text-white">
-                  Jobbie will help you land the perfect
-                </p>
-                <a
-                  href=""
-                  className="button is-info is-rounded"
-                  target="_blank"
-                >
-                  <span className="has-text-info">Visit Project</span>
                 </a>
               </figcaption>
               <div className="overlay" />
