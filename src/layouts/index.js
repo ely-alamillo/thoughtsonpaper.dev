@@ -12,8 +12,15 @@ const Layout = ({ children, data }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Hi, Welcome to my tiny space on the web. },
-        { name: 'keywords', content: 'Ely Alamillo, Ely, Alamillo, React, Typescript, Javascript, GraphQL' },
+        {
+          name: 'description',
+          content: 'Hi, Welcome to my tiny space on the web.',
+        },
+        {
+          name: 'keywords',
+          content:
+            'Ely Alamillo, Ely, Alamillo, React, Typescript, Javascript, GraphQL',
+        },
         { name: 'author', content: 'Ely Alamillo' },
       ]}
       link={[{ rel: 'shortcut icon', type: 'image/svg', href: `${favicon}` }]}
