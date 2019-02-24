@@ -3,6 +3,15 @@
   max-width: 50%;
 }
 
+.hero {
+  background: url('../img/planes-final.svg') repeat;
+  padding: 12em 0em;
+  @media screen and (max-width: 320px) {
+    background: url('../img/planes-final.svg') repeat center center;
+    padding: 0em;
+  }
+}
+
 .hero-foot {
   padding: 0rem 1.5rem;
 }

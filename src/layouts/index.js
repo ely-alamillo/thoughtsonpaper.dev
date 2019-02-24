@@ -18,10 +18,6 @@ const Layout = ({ children, data }) => (
       link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-
-    {/* <div className="section">
-      <div className="container">{children()}</div>
-    </div> */}
     {children()}
   </div>
 )

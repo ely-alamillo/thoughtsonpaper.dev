@@ -21,9 +21,7 @@ const Hero = () => (
       </div>
     </div>
     <div className="hero-foot">
-      <div className="container">
-        <img className="is-bottom desk-img" src={desk} alt="Desk Image" />
-      </div>
+      <div className="container" />
     </div>
   </section>
 )
