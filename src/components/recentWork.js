@@ -44,7 +44,7 @@ const RecentWork = () => (
                   Use Bitsy for all your URL shortening needs.
                 </p>
                 <a
-                  href=""
+                  href="https://bitsy.herokuapp.com/"
                   className="button is-info is-rounded"
                   target="_blank"
                 >
@@ -82,7 +82,7 @@ const RecentWork = () => (
                   Jobbie will help you land the perfect
                 </p>
                 <a
-                  href=""
+                  href="https://jobbieio.netlify.com/#/"
                   className="button is-info is-rounded"
                   target="_blank"
                 >
@@ -119,7 +119,7 @@ const RecentWork = () => (
                   Speech Trainer was built to help you speak better english.
                 </p>
                 <a
-                  href=""
+                  href="https://speech-training.herokuapp.com/"
                   className="button is-info is-rounded"
                   target="_blank"
                 >
