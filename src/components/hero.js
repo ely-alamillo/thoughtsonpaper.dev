@@ -1,6 +1,5 @@
 import React from 'react'
 import profile from '../img/profile.png'
-import desk from '../img/hero-desk.png'
 import './hero.scss'
 
 const Hero = () => (
