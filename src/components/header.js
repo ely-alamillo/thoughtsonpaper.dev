@@ -5,7 +5,11 @@ import logo from '../img/ely-box.svg'
 import './header.scss'
 
 const closeNav = () => {
-  document.querySelector('.navbar-menu').classList.toggle('is-active')
+  const size = window.innerWidth
+
+  if (size < 1024) {
+    document.querySelector('.navbar-menu').classList.toggle('is-active')
+  }
 }
 const Header = ({ siteTitle }) => (
   <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -28,9 +32,7 @@ const Header = ({ siteTitle }) => (
           aria-label="menu"
           aria-expanded="false"
           data-target="navMenu"
-          onClick={() =>
-            document.querySelector('.navbar-menu').classList.toggle('is-active')
-          }
+          onClick={() => closeNav()}
         >
           <span aria-hidden="true" />
           <span aria-hidden="true" />
@@ -40,16 +42,16 @@ const Header = ({ siteTitle }) => (
 
       <div className="navbar-menu" id="navMenu">
         <div className="navbar-end">
-          <div className="navbar-item">
+          <div className="navbar-item" onClick={() => closeNav()}>
             <Link to="/#about">About</Link>
           </div>
-          <div className="navbar-item">
+          <div className="navbar-item" onClick={() => closeNav()}>
             <Link to="/#skills">Skills</Link>
           </div>
-          <div className="navbar-item">
+          <div className="navbar-item" onClick={() => closeNav()}>
             <Link to="/#recentWork">Recent Work</Link>
           </div>
-          <div className="navbar-item">
+          <div className="navbar-item" onClick={() => closeNav()}>
             <Link to="/#contact">Contact</Link>
           </div>
         </div>
