@@ -22,5 +22,3 @@ yarn/npm build
 # gatsby serve to serve from static folder
 ```
 
-## Deploy
-
