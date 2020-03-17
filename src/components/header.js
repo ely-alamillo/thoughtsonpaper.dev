@@ -5,13 +5,6 @@ import altLogo from '../img/logo-hotpink.svg'
 
 import './header.scss'
 
-const closeNav = () => {
-  const size = window.innerWidth
-
-  if (size < 1024) {
-    document.querySelector('.navbar-menu').classList.toggle('is-active')
-  }
-}
 class Header extends React.Component {
   state = {
     isHover: false,
@@ -19,6 +12,14 @@ class Header extends React.Component {
 
   setIsHover(status) {
     this.setState({ isHover: status })
+  }
+
+  closeNav() {
+    const size = window.innerWidth
+
+    if (size < 1024) {
+      document.querySelector('.navbar-menu').classList.toggle('is-active')
+    }
   }
 
   render() {
@@ -44,7 +45,7 @@ class Header extends React.Component {
             {/* <h2>{siteTitle}</h2> */}
             <a
               role="button"
-              className="navbar-burger"
+              className="navbar-burger navbar-item-no-hover"
               aria-label="menu"
               aria-expanded="false"
               data-target="navMenu"
