@@ -3,7 +3,7 @@ import React from 'react'
 import './card.scss'
 
 const Card = ({ title, subHeader, techHeader, stack, toolsHeader, tools }) => (
-  <div className="box">
+  <div className="box box-hot-pink-hover">
     <header>
       <h1 className="title">{title}</h1>
       <p>{subHeader}</p>
