@@ -3,17 +3,20 @@ import React from 'react'
 import './footer.scss'
 
 const Footer = () => (
-  <div className="footer has-background-white-ter">
+  <footer className="footer has-background-white-ter">
     <div className="container">
       <div className="has-text-centered">
         <div className="nav-center">
-          <a className="nav-item" href="https://github.com/ely-alamillo">
+          <a
+            className="nav-item has-text-link"
+            href="https://github.com/ely-alamillo"
+          >
             <span className="icon is-large">
               <i className="fab fa-github fa-2x" />
             </span>
           </a>
           <a
-            className="nav-item"
+            className="nav-item has-text-link"
             href="https://www.linkedin.com/in/elyalamillo/"
           >
             <span className="icon is-large">
@@ -21,7 +24,7 @@ const Footer = () => (
             </span>
           </a>
           <a
-            className="nav-item"
+            className="nav-item has-text-link"
             href="mailto:ely0013@gmail.com?Subject=Hello%20Ely"
           >
             <span className="icon is-large">
@@ -34,7 +37,7 @@ const Footer = () => (
         </p>
       </div>
     </div>
-  </div>
+  </footer>
 )
 
 export default Footer

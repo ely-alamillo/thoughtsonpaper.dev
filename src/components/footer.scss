@@ -1,12 +1,12 @@
+@import '../theme.scss';
+
 footer {
   &.footer {
     padding: 1.5rem;
   }
   a {
-    color: goldenrod;
-    // border: 5px solid lightblue;
-    &:hover {
-      color: aqua;
+    &.has-text-link:hover {
+      color: $hot-pink !important;
     }
   }
 }
