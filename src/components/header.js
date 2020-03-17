@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
   <nav className="navbar" role="navigation" aria-label="main navigation">
     <div className="container">
       <div className="navbar-brand">
-        <a className="navbar-item">
+        <a className="navbar-item navbar-item-no-hover">
           <img
             src={logo}
             alt="Ely Alamillo"
@@ -41,7 +41,7 @@ const Header = ({ siteTitle }) => (
       </div>
 
       <div className="navbar-menu" id="navMenu">
-        <div className="navbar-end">
+        <div className="navbar-end has-text-weight-bold">
           <div className="navbar-item" onClick={() => closeNav()}>
             <Link to="/#about">About</Link>
           </div>

@@ -8,8 +8,12 @@
   }
 
   a:hover {
-    border-bottom: 5px solid #ff1493;
-    color: #ff1493;
+    border-bottom: 5px solid $hot-pink;
+    color: $hot-pink;
+  }
+
+  a.navbar-itemnavbar-item-no-hover:hover {
+    border-bottom: none;
   }
 }
 
