@@ -25,10 +25,10 @@ function MyApp({ Component, pageProps }) {
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@_elyalamillo" />
-        {/* <meta
+        <meta
           property="og:image"
           content={og ? og.image : `https://elyalamillo.com/og/page-card.svg`}
-        /> */}
+        />
 
         <script
           async
