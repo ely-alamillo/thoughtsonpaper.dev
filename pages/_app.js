@@ -26,11 +26,11 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@_elyalamillo" />
         <meta
-          property="twitter:image"
+          property="og:image"
           content={
             og
               ? og.image
-              : `https://personal-site-git-blog.elyalamillo.vercel.app/og/page-card.svg`
+              : `https://personal-site-git-blog.elyalamillo.vercel.app/og/page-card.png`
           }
         />
 
