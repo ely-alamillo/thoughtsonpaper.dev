@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:site" content="@_elyalamillo" />
         <meta
           property="og:image"
-          content={og ? og.image : `https://elyalamillo.com/og/page-card.svg`}
+          content={og ? og.image : `https://`${process.env.VERCEL_URL}`/og/page-card.svg`}
         />
 
         <script
