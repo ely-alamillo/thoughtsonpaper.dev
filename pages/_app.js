@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@_elyalamillo" />
         <meta
-          property="twitter:image"
+          name="twitter:image"
           content={
             og
               ? og.image
