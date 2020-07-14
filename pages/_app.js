@@ -28,7 +28,9 @@ function MyApp({ Component, pageProps }) {
         <meta
           property="og:image"
           content={
-            og ? og.image : `https://${process.env.VERCEL_URL}/og/page-card.svg`
+            og
+              ? og.image
+              : `https://personal-site-git-blog.elyalamillo.vercel.app/og/page-card.svg`
           }
         />
 
