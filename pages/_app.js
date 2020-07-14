@@ -23,10 +23,18 @@ function MyApp({ Component, pageProps }) {
               : `An attempt to getting my thought on " paper ".`
           }
         />
+        <meta
+          property="og:image"
+          content={
+            og
+              ? og.image
+              : `https://personal-site-git-blog.elyalamillo.vercel.app/og/page-card.png`
+          }
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@_elyalamillo" />
         <meta
-          property="og:image"
+          property="twitter:image"
           content={
             og
               ? og.image
