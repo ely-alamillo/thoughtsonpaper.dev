@@ -1,26 +1,23 @@
 export const PRESENT = [
-  'HTML5',
-  'CSS3',
+  'Typescript',
   'JavaScript',
-  'PHP',
-  'MySQL',
-  'PostgreSQL',
-  'WordPress',
-  'jQuery',
-  'CoffeeScript',
-  'Angular',
-  'Rails',
-  'Gatsby',
-  'Sass',
-  'Apollo GraphQL',
   'React',
+  'Angular',
   'Next.js',
+  'Redux',
+  'Gatsby',
+  'Zeit',
+  'Python',
+  'PostgreSQL',
+  'Apollo GraphQL',
   'GraphQL',
   'Node.js',
-  'Redux',
-  'TypeScript',
-  'Zeit',
-]
+  'Flask',
+  'Sass',
+  'CSS3',
+  'HTML5',
+  'jQuery',
+];
 
 export const SKILLS = [
   'codes',
@@ -36,4 +33,4 @@ export const SKILLS = [
   'lives',
   'creates bugs',
   'fixes bugs',
-]
+];
