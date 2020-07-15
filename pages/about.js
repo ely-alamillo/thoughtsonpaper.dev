@@ -26,29 +26,34 @@ function About() {
       <Layout secondaryPage>
         <div style={{ marginTop: 50 }}>
           <h1 className="about-h1">
-            Ely{' '}
-            <TextTransition
+            Ely Alamillo
+            {/* <TextTransition
               text={SKILLS[index % SKILLS.length]}
               springConfig={config.gentle}
               style={{ display: 'inline-block' }}
-            />
+            /> */}
           </h1>
 
           <div className="about-intro">
             <Row>
               <Col md={12}>
-                I'm a full-stack engineer with 13+ years of experience. I
-                started my career back in 2007 as a designer, then quickly
-                started coding as well.
+                I'm a frontend engineer with 3+ years of experience and I'm
+                currently working at{' '}
+                <a href="https://aws.amazon.com/iot/">AWS IoT</a>. Over the past
+                few months i've had an itch of sharing my knowledge with the dev
+                community and never followed through. I eventually decided to
+                buckle down and start this blog. Hopefully I can share things
+                that interests other as much as me.
                 <br />
                 <br />
-                I've seen it all. In my career I've worked with a lot of
-                technologies: PHP, MooTools, jQuery, Ruby on Rails, Angular,
-                ReactJS, GraphQL, and many more.
+                I'm still not sure what exactly i'll be writing about but i'm
+                sure as time goes on i'll find my groove.
+                <br />
+                <br />
               </Col>
             </Row>
             <hr />
-            <h3>What I've worked with so far</h3>
+            <h3>Things i've worked with: </h3>
             <Row style={{ marginTop: 30 }}>
               {PRESENT.map((s) => (
                 <Col
