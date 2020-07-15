@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import { Sun, Moon } from 'react-feather';
+import { Moon, Zap } from 'react-feather';
 import Link from 'next/link';
 
 const menu = [
@@ -58,11 +58,11 @@ function Layout({ children, isHomepage, secondaryPage, noHead = false }) {
         <Row>
           <Col xs={10}>
             <ul>
-              <li className="logo">
+              {/* <li className="logo">
                 <Link href="/" as="/">
                   <a>⧩</a>
                 </Link>
-              </li>
+              </li> */}
 
               {menu.map(({ path, name }) => (
                 <li key={name}>
@@ -79,7 +79,7 @@ function Layout({ children, isHomepage, secondaryPage, noHead = false }) {
               className="theme-switch-button"
               onClick={() => switchTheme()}
             >
-              {theme === 'dark' ? <Sun /> : <Moon />}
+              {theme === 'dark' ? <Zap /> : <Moon />}
             </button>
           </Col>
         </Row>
