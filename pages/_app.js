@@ -13,14 +13,14 @@ function MyApp({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
-        <meta property="og:title" content={title || `Ely Alamillo`} />
-        <meta property="og:site_name" content={`thoughts on " paper "`} />
+        <meta property="og:title" content={title || `thoughts on "paper"`} />
+        <meta property="og:site_name" content={`thoughts on "paper"`} />
         <meta
           property="og:description"
           content={
             og
               ? og.description
-              : `An attempt to getting my thought on " paper ".`
+              : `An attempt to getting my thoughts on " paper ".`
           }
         />
         <meta
@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
           charset="utf-8"
         ></script>
 
-        <title>{title || `Ely Alamillo`}</title>
+        <title>{title || `thoughts on "paper"`}</title>
       </Head>
 
       <Component {...pageProps} />
