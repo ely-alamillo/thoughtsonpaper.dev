@@ -1,34 +1,35 @@
 {
-  "name": "personal-portfolio",
-  "description": "Personal Portfolio",
+  "name": "ely-blog",
   "version": "1.0.0",
-  "author": "Ely Alamillo <ely0013@gmail.com>",
-  "dependencies": {
-    "bulma": "0.7.1",
-    "font-awesome": "4.7.0",
-    "gatsby": "1.9.247",
-    "gatsby-link": "1.6.40",
-    "gatsby-plugin-google-analytics": "2.0.14",
-    "gatsby-plugin-react-helmet": "2.0.10",
-    "gatsby-plugin-sass": "1.0.26",
-    "react-fontawesome": "1.6.1",
-    "react-helmet": "5.2.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
+  "description": "Attempt at thoughts on paper",
+  "main": "index.js",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "build:static": "next build && next export",
+    "next:export": "next export"
   },
-  "devDependencies": {
-    "prettier": "1.12.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
+  "author": "Ely Alamillo <@_elyalamillo>",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "gray-matter": "^4.0.2",
+    "next": "^9.4",
+    "next-compose-plugins": "^2.2.0",
+    "next-transpile-modules": "^3.1.0",
+    "node-sass": "^4.14.1",
+    "raw-loader": "^4.0.1",
+    "react": "^16.13.1",
+    "react-copy-to-clipboard": "^5.0.2",
+    "react-dom": "^16.13.1",
+    "react-feather": "^2.0.4",
+    "react-flexbox-grid": "^2.1.2",
+    "react-markdown": "^4.3.1",
+    "react-scroll-progress-bar": "^1.1.12",
+    "react-syntax-highlighter": "^12.2.1",
+    "react-text-transition": "^1.0.2",
+    "simple-icons": "^2.9.0"
   }
 }
