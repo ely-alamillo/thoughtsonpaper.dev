@@ -58,18 +58,20 @@ function Writing({ content, data }) {
                     </a>
                   );
                 },
+                image: (props) => {
+                  return <img {...props} style={{ marginTop: '1em' }}></img>;
+                },
               }}
             />
 
             <div className="twitter-follow">
-              Follow me on{' '}
+              If you have any questions feel free to find me on{' '}
               <a
                 href="https://twitter.com/_elyalamillo"
                 rel="noopener noreferrer nofollow"
               >
                 Twitter
-              </a>{' '}
-              for more
+              </a>
             </div>
           </div>
         </div>
