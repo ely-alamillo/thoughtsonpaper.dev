@@ -1,6 +1,6 @@
 ---
 title: 'How to add Namecheap domain to Vercel'
-date: '22020-07-18T22:37:19Z'
+date: '2020-07-18T22:37:19Z'
 author:
   twitter: '_elyalamillo'
   name: 'Ely Alamillo'

@@ -9,7 +9,6 @@ import Layout from '../components/Layout';
 function formatDate(date) {
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
   const today = new Date(date);
-  console.log({ today });
 
   return today.toLocaleDateString('en-US', options);
 }
@@ -72,8 +71,6 @@ Homepage.getInitialProps = async (context) => {
       const document = matter(value.default);
       return { document, slug };
     });
-
-    console.log(data[0]);
 
     return data
       .slice()
