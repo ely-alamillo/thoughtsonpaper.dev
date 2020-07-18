@@ -5,6 +5,7 @@ import '../styles/base.scss';
 function MyApp({ Component, pageProps }) {
   const og = pageProps.data?.og;
   const title = pageProps.data?.title;
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
   return (
     <>
@@ -20,15 +21,13 @@ function MyApp({ Component, pageProps }) {
           content={
             og
               ? og.description
-              : `An attempt to getting my thoughts on " paper ".`
+              : `An attempt at getting my thoughts on " paper ".`
           }
         />
         <meta
           property="og:image"
           content={
-            og
-              ? og.image
-              : `https://personal-site-git-blog.elyalamillo.vercel.app/og/page-card.png`
+            og ? `${SITE_URL}${og.image}` : `${SITE_URL}/og/page-card.png`
           }
         />
         <meta name="twitter:card" content="summary_large_image" />
@@ -36,9 +35,7 @@ function MyApp({ Component, pageProps }) {
         <meta
           name="twitter:image"
           content={
-            og
-              ? og.image
-              : `https://personal-site-git-blog.elyalamillo.vercel.app/og/page-card.png`
+            og ? `${SITE_URL}${og.image}` : `${SITE_URL}/og/page-card.png`
           }
         />
 
