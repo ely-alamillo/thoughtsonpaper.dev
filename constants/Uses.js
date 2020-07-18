@@ -63,7 +63,7 @@ export const USES = [
       },
       {
         name: 'Bose QuietComfort 35',
-        description: "Can't here a thing with these on",
+        description: "Can't hear a thing with these on",
         link:
           'https://www.bose.com/en_us/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html#v=qc35_ii_black',
       },
