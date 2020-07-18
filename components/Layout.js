@@ -6,15 +6,15 @@ import Link from 'next/link';
 const menu = [
   {
     path: '/',
-    name: 'about',
+    name: 'Home',
   },
   {
-    path: '/blog',
-    name: 'Blog',
+    path: '/about',
+    name: 'About',
   },
   {
     path: '/uses',
-    name: 'uses',
+    name: 'Uses',
   },
 ];
 
