@@ -6,11 +6,11 @@ import Link from 'next/link';
 const menu = [
   {
     path: '/',
-    name: 'home',
+    name: 'about',
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/blog',
+    name: 'Blog',
   },
   {
     path: '/uses',
