@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
           async
           src="https://platform.twitter.com/widgets.js"
           charSet="utf-8"
-        ></script>
+        />
 
         <title>{title || `thoughts on "paper"`}</title>
       </Head>

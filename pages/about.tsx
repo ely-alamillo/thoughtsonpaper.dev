@@ -1,29 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Col } from 'react-flexbox-grid';
 import dynamic from 'next/dynamic';
-import { config } from 'react-spring';
 
+import { Layout, Icon } from '@Components';
+import { PRESENT } from '@Constants';
+
+/* eslint-disable-next-line */
 const TextTransition = dynamic(() => import('react-text-transition'), {
   ssr: false,
 });
 
-import Layout from '../components/Layout';
-import Icon from '../components/Icon';
-import { PRESENT, SKILLS } from '../constants/Stack';
-
 function About() {
-  const [index, setIndex] = useState(0);
+  const [_index, setIndex] = useState(0);
 
   useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
+    const _intervalId = setInterval(
+      () => setIndex(index => index + 1),
       3000 // every 3 seconds
     );
   }, []);
 
   return (
     <>
-      <Layout secondaryPage>
+      <Layout secondaryPage isHomepage={false}>
         <div style={{ marginTop: 50 }}>
           <h1 className="about-h1">
             Ely Alamillo
@@ -55,7 +54,7 @@ function About() {
             <hr />
             <h3>Things i've worked with: </h3>
             <Row style={{ marginTop: 30 }}>
-              {PRESENT.map((s) => (
+              {PRESENT.map(s => (
                 <Col
                   md={2}
                   xs={4}

@@ -1,7 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, {
+  useState,
+  useEffect,
+  FunctionComponent,
+  ReactNode,
+} from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { Moon, Zap } from 'react-feather';
 import Link from 'next/link';
+
+interface LayoutProps {
+  children: ReactNode;
+  isHomepage: boolean;
+  secondaryPage: boolean;
+  noHead?: boolean;
+}
 
 const menu = [
   {
@@ -18,7 +30,12 @@ const menu = [
   },
 ];
 
-function Layout({ children, isHomepage, secondaryPage, noHead = false }) {
+export const Layout: FunctionComponent<LayoutProps> = ({
+  children,
+  isHomepage,
+  secondaryPage,
+  // _noHead = false,
+}) => {
   const onLoadTheme =
     typeof localStorage !== 'undefined' && localStorage.getItem('BLOG_THEME');
   const [theme, setTheme] = useState(onLoadTheme);
@@ -76,6 +93,7 @@ function Layout({ children, isHomepage, secondaryPage, noHead = false }) {
 
           <Col xs={2} style={{ textAlign: 'right' }}>
             <button
+              type="button"
               className="theme-switch-button"
               onClick={() => switchTheme()}
             >
@@ -90,10 +108,10 @@ function Layout({ children, isHomepage, secondaryPage, noHead = false }) {
           <Col {...containerProps}>
             {!secondaryPage && (
               <h1
-                className={`blog-title`}
+                className="blog-title"
                 style={isHomepage && { textAlign: 'left' }}
               >
-                {`thoughts on " paper "`}
+                thoughts on " paper "
               </h1>
             )}
 
@@ -107,6 +125,4 @@ function Layout({ children, isHomepage, secondaryPage, noHead = false }) {
       </footer>
     </>
   );
-}
-
-export default Layout;
+};
