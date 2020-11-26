@@ -2,13 +2,11 @@ import React from 'react';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import Link from 'next/link';
-import Head from 'next/head';
 import ProgressBar from 'react-scroll-progress-bar';
 
-import Layout from '../../components/Layout';
-import CodeBlock from '../../components/CodeBlock';
+import { Layout, CodeBlock } from '@Components';
 
-function Writing({ content, data }) {
+export const Writing = ({ content, data }) => {
   const frontmatter = data;
   const { title, author } = frontmatter;
   const avatar = `https://images.weserv.nl/?url=https://unavatar.now.sh/twitter/${author.twitter}&w=40`;
@@ -19,7 +17,7 @@ function Writing({ content, data }) {
         <ProgressBar height="5px" />
       </div>
 
-      <Layout secondaryPage noHead>
+      <Layout secondaryPage noHead isHomepage={false}>
         <div style={{ marginTop: 50 }}>
           <Link href="/" as="/">
             <a className="back-button">back</a>
@@ -32,7 +30,7 @@ function Writing({ content, data }) {
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
-              <img src={avatar} />
+              <img src={avatar} alt="avatar" />
               {author.name}
             </a>
           </div>
@@ -43,7 +41,7 @@ function Writing({ content, data }) {
               escapeHtml={false}
               renderers={{
                 code: CodeBlock,
-                link: (props) => {
+                link: props => {
                   if (!props.href.startsWith('http')) {
                     return props.href;
                   }
@@ -58,8 +56,8 @@ function Writing({ content, data }) {
                     </a>
                   );
                 },
-                image: (props) => {
-                  return <img {...props} style={{ marginTop: '1em' }}></img>;
+                image: props => {
+                  return <img {...props} style={{ marginTop: '1em' }} alt="" />;
                 },
               }}
             />
@@ -78,9 +76,9 @@ function Writing({ content, data }) {
       </Layout>
     </>
   );
-}
+};
 
-Writing.getInitialProps = async (context) => {
+Writing.getInitialProps = async context => {
   const { slug } = context.query;
   const content = await import(`../../writings/${slug}.md`);
   const data = matter(content.default);

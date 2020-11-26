@@ -1,10 +1,9 @@
 import React from 'react';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import Head from 'next/head';
 import { Row, Col } from 'react-flexbox-grid';
 
-import Layout from '../components/Layout';
+import { Layout } from '@Components';
 
 function formatDate(date) {
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -23,7 +22,7 @@ function freshWriting(date) {
 function Homepage({ writings }) {
   return (
     <>
-      <Layout isHomepage>
+      <Layout isHomepage secondaryPage={false}>
         <Row>
           {writings.map(({ document, slug }) => {
             const {
@@ -57,27 +56,28 @@ function Homepage({ writings }) {
   );
 }
 
-Homepage.getInitialProps = async (context) => {
-  const writings = ((context) => {
-    const keys = context.keys();
-    const values = keys.map(context);
+Homepage.getInitialProps = async _context => {
+  const writings = (ctx => {
+    const keys = ctx.keys();
+    const values = keys.map(ctx);
     const data = keys.map((key, index) => {
       const slug = key
-        .replace(/^.*[\\\/]/, '')
+        .replace(/^.*[\\/]/, '')
         .split('.')
         .slice(0, -1)
         .join('.');
       const value = values[index];
+      // FIXME:
+      // @ts-ignore
       const document = matter(value.default);
       return { document, slug };
     });
 
-    return data
-      .slice()
-      .sort(
-        (a, b) =>
-          new Date(b.document.data.date) - new Date(a.document.data.date)
-      );
+    return data.slice().sort(
+      (a, b) =>
+        // cast to number
+        +new Date(b.document.data.date) - +new Date(a.document.data.date)
+    );
   })(require.context('../writings', true, /\.md$/));
 
   return {

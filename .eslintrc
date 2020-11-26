@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "nextjs"
+  ],
+  "rules" : {
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
+    "no-unused-vars": ["error", { "varsIgnorePattern": "^_" }],
+    "react/no-danger": ["off", {}],
+    "no-plusplus": ["off", {}],
+    "no-undef": ["off", {}]
+  },
+  "settings": { 
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    }
+  }
+}

@@ -8,7 +8,10 @@
     "build": "next build",
     "start": "next start",
     "build:static": "next build && next export",
-    "next:export": "next export"
+    "next:export": "next export",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:fix:tsx": "eslint --fix --ext .ts,.tsx ."
   },
   "author": "Ely Alamillo <@_elyalamillo>",
   "license": "ISC",
@@ -18,7 +21,7 @@
     "gray-matter": "^4.0.2",
     "next": "^9.4",
     "next-compose-plugins": "^2.2.0",
-    "next-transpile-modules": "^3.1.0",
+    "next-transpile-modules": "^5.0.0-beta.15",
     "node-sass": "^4.14.1",
     "raw-loader": "^4.0.1",
     "react": "^16.13.1",
@@ -28,8 +31,28 @@
     "react-flexbox-grid": "^2.1.2",
     "react-markdown": "^4.3.1",
     "react-scroll-progress-bar": "^1.1.12",
-    "react-syntax-highlighter": "^12.2.1",
+    "react-syntax-highlighter": "^15.3.1",
     "react-text-transition": "^1.0.2",
     "simple-icons": "^2.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.8",
+    "@types/react": "^16.9.51",
+    "@types/webpack-env": "^1.16.0",
+    "@typescript-eslint/parser": "^4.8.2",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-nextjs": "^1.0.6",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-html": "^5.0.5",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^1.19.1",
+    "typescript": "^4.0.3"
   }
 }

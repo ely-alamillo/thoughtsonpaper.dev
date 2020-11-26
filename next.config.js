@@ -12,7 +12,7 @@ const withSASSPlugin = [withSASS];
 
 const plugins = [withCSSPlugin, withSASSPlugin, withTM];
 const nextConfig = {
-  webpack: function (config) {
+  webpack(config) {
     config.module.rules.push({
       test: /\.md$/,
       use: 'raw-loader',

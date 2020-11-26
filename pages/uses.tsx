@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
-import { USES } from '../constants/Uses';
+import { Layout } from '@Components';
+import { USES } from '@Constants';
 
-function Uses({ og }) {
+function Uses() {
   return (
     <>
-      <Layout secondaryPage>
+      <Layout secondaryPage isHomepage={false}>
         <h1 className="uses-h1">Things I use</h1>
 
         <div className="uses-intro">
@@ -37,7 +37,9 @@ function Uses({ og }) {
   );
 }
 
-Uses.getInitialProps = () => {
+Uses.getInitialProps = (): {
+  data: { og: { description: string; image: string } };
+} => {
   return {
     data: {
       og: {
