@@ -2,7 +2,7 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "eslint:recommended",
+    // "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
@@ -30,9 +30,27 @@
     }
   },
   "rules": {
-    "@typescript-eslint/explicit-module-boundary-types": ["off"],
-    "react/react-in-jsx-scope": ["off"],
-    "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
+    "@typescript-eslint/explicit-module-boundary-types": [
+      "off"
+    ],
+    "@typescript-eslint/ban-ts-comment": [
+      "off"
+    ],
+    "react/react-in-jsx-scope": [
+      "off"
+    ],
+    "react/prop-types": "off",
+    "jsx-a11y/anchor-is-valid": "off", // This rule is not compatible with Next.js's <Link /> components    
+    "@typescript-eslint/no-unused-vars": [
+      "typescript-eslint/no-unused-vars"
+    ],
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": true
+      }
+    ]
   },
   "plugins": [
     "prettier"
