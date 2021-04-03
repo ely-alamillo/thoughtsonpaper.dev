@@ -51,3 +51,7 @@ exportPathMap: async function(defaultPathMap, { dev, dir, outDir, distDir, build
 ```
 
 Just make sure to remove any references of my name and use yours 🙂
+
+### Todo
+[] scroll progress on blogs never reaches 100%
+[] light mode sucks
