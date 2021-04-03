@@ -185,8 +185,7 @@ h6 {
 
 .writing-row .writing-title {
   font-weight: 600;
-  font-size: 20px;
-  line-height: 1.9em;
+  font-size: 20px;  
 }
 
 .about-h1 {
@@ -437,9 +436,8 @@ strong {
 
   box-shadow: 0 0 0 0 var(--highlight-color);
   transform: scale(1.2);
-  animation: pulse 2s infinite;
-  margin: -7px 15px 0 0;
-  vertical-align: middle;
+  animation: pulse 2s infinite;  
+  vertical-align: sub;
 }
 
 @keyframes pulse {

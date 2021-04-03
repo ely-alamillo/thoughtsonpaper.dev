@@ -23,7 +23,7 @@ export const Writing = ({ content, data }) => {
           <Link href="/" as="/">
             <a className="back-button">back</a>
           </Link>
-          <h1 className="text-6xl mb-20 mt-10 font-bold tracking-wide leading-normal">
+          <h1 className="text-4xl md:text-6xl md:leading-normal mb-10 mt-10 font-bold tracking-wide leading-normal">
             {title}
           </h1>
           <div className="writing-container">

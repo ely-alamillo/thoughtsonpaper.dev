@@ -37,8 +37,12 @@ function Homepage({ writings }) {
                   </div>
 
                   <Link href="/blog/[slug]" as={`/blog/${slug}`}>
-                    <a>
-                      {freshWriting(date) && <div className="pulse" />}
+                    <a className="flex">
+                      {freshWriting(date) && (
+                        <div className="inline-block align-bottom pr-1">
+                          <div className="pulse" />
+                        </div>
+                      )}
                       <span className="writing-title">{title}</span>
                     </a>
                   </Link>
