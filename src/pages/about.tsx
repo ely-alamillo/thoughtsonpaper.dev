@@ -33,7 +33,7 @@ function About() {
           </h1>
 
           <div className="about-intro">
-            <div>
+            <div className="pb-10">
               I'm a frontend engineer with 3+ years of experience and I'm
               currently working at{' '}
               <a href="https://aws.amazon.com/iot/">AWS IoT</a>. Over the past
@@ -48,7 +48,7 @@ function About() {
               <br />
               <br />
             </div>
-            <hr />
+            {/* <hr /> */}
             <h3>Things i've worked with: </h3>
             <div
               style={{ marginTop: 30 }}
@@ -64,16 +64,17 @@ function About() {
                 </div>
               ))}
             </div>
-            <hr />
-            <div className="twitter-follow">
-              Follow me on{' '}
-              <a
-                href="https://twitter.com/_elyalamillo"
-                rel="noopener noreferrer nofollow"
-              >
-                Twitter
-              </a>{' '}
-              for more
+            <div className="pt-16">
+              <div className="twitter-follow">
+                Follow me on{' '}
+                <a
+                  href="https://twitter.com/_elyalamillo"
+                  rel="noopener noreferrer nofollow"
+                >
+                  Twitter
+                </a>{' '}
+                for more
+              </div>
             </div>
           </div>
         </div>
