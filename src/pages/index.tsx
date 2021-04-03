@@ -39,7 +39,7 @@ function Homepage({ writings }) {
                   <Link href="/blog/[slug]" as={`/blog/${slug}`}>
                     <a className="flex">
                       {freshWriting(date) && (
-                        <div className="inline-block align-bottom pr-1">
+                        <div className="flex justify-center items-center pr-3">
                           <div className="pulse" />
                         </div>
                       )}

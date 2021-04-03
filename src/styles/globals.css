@@ -436,8 +436,7 @@ strong {
 
   box-shadow: 0 0 0 0 var(--highlight-color);
   transform: scale(1.2);
-  animation: pulse 2s infinite;  
-  vertical-align: sub;
+  animation: pulse 2s infinite;   
 }
 
 @keyframes pulse {
