@@ -19,23 +19,30 @@
   --red: rgb(255, 85, 85);
   --yellow: rgb(241, 250, 140);
 
-  --white: rgb(255, 255, 255);
+  --white: rgb(245, 246, 249);
   --grey: #2b2b2b;
   --dark-purple: rgb(109, 23, 232);
 
+  /* LIGHT THEME PALETTE   */
+  --light-grey: rgb(107,114,128);
+  --elation: rgba(223, 220, 229, 1.00);
+  --nugget: rgba(219, 176, 74, 1.00);
+  --celestial: rgba(151, 179, 208, 1.00);
+  
+
   /* APP THEME */
-  --primary-color: var(--purple);
-  --secondary-color: var(--green);
+  --primary-color: var(--dark-purple);
+  --secondary-color: var(--grey);
   --font-color: var(--grey);
   --bg-color: var(--white);
-  --heading-color: var(--pink);
-  --highlight-color: var(--green);
-  --hr-color: var(--comment);
+  --heading-color: var(--dark-purple);
+  --highlight-color: var(--dark-purple);
+  --hr-color: var(--dark-purple);
   --writing-body: var(--grey);
   --uses-secondary-color: var(--font-color);
-  --code: var(--cyan);
+  --code: var(--dark-purple);
   --link: var(--dark-purple);
-  --underline: var(--cyan);
+  --underline: var(--dark-purple);
 }
 
 [data-theme='dark'] {
@@ -236,7 +243,7 @@ h6 {
 .writing-container *:not(pre) > code {
   font-family: ibm-plex-mono, Monaco, 'Lucida Console';
   background: var(--code);
-  color: var(--background);
+  color: var(--bg-color);
   padding: 2px 7px 5px;
   border-radius: 4px;
   line-height: 1em;
@@ -257,12 +264,12 @@ hr {
 }
 
 .back-button {
-  color: var(--secondary-color);
+  color: var(--font-color);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: -1px;
-  border: 1px var(--hr-color) solid;
+  border: 2px var(--font-color) solid;
   display: inline-block;
   padding: 10px 20px;
   border-radius: 4px;
@@ -270,7 +277,8 @@ hr {
 }
 
 .back-button:hover {
-  border-color: var(--secondary-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .copy-to-clipboard {
@@ -281,10 +289,8 @@ hr {
 
 .copy-to-clipboard button {
   background: none;
-  border: none;
-  font-size: 11px;
+  border: none; 
   text-transform: uppercase;
-  font-weight: 600;
   color: var(--secondary-color);
   cursor: pointer;
   cursor: hand;
@@ -420,7 +426,6 @@ strong {
 /* Override scroll progress */
 .writing-progress > div {
   background: var(--highlight-color) !important;
-  margin: 0 -8px !important;
 }
 
 .pulse {

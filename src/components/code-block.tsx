@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { anOldHope } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-// import { Copy, Check } from 'react-feather';
+import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { CoyWithoutShadows } from 'utils/syntax-highlighters';
 
 const preStyle = {
   borderRadius: 6,
@@ -45,6 +46,7 @@ export class CodeBlock extends PureComponent<CodeblockProps, CodeblockState> {
   }
 
   componentDidMount() {
+    console.log(this.props);
     const { language } = this.props;
     const linesObj = language && language.split(':')[1];
 
@@ -57,10 +59,10 @@ export class CodeBlock extends PureComponent<CodeblockProps, CodeblockState> {
         updateLines: [],
       };
 
-      splittedValues.forEach((lines) => {
+      splittedValues.forEach(lines => {
         const linesRange = lines.split(',');
 
-        linesRange.forEach((eachLine) => {
+        linesRange.forEach(eachLine => {
           const splitted = eachLine.split('-');
 
           if (splitted[0] === '') {
@@ -89,7 +91,7 @@ export class CodeBlock extends PureComponent<CodeblockProps, CodeblockState> {
 
           // FIXME: not sure how to fix this issue
           // @ts-ignore
-          this.setState((state) => ({
+          this.setState(state => ({
             [stateLabel]: [...state[stateLabel], ...linesToUpdate[stateLabel]],
           }));
         });
@@ -99,13 +101,13 @@ export class CodeBlock extends PureComponent<CodeblockProps, CodeblockState> {
 
   copyToClipboard = () => {
     this.setState(
-      (state) => ({
+      state => ({
         ...state,
         copiedToClipboard: true,
       }),
       () => {
         setTimeout(() => {
-          this.setState((state) => ({
+          this.setState(state => ({
             ...state,
             copiedToClipboard: false,
           }));
@@ -115,7 +117,7 @@ export class CodeBlock extends PureComponent<CodeblockProps, CodeblockState> {
   };
 
   toggleCopyButton = () => {
-    this.setState((state) => ({
+    this.setState(state => ({
       ...state,
       displayCopyButton: !state.displayCopyButton,
     }));
@@ -137,11 +139,11 @@ export class CodeBlock extends PureComponent<CodeblockProps, CodeblockState> {
       >
         <SyntaxHighlighter
           language={language}
-          style={anOldHope}
+          style={CoyWithoutShadows}
           customStyle={preStyle}
           codeTagProps={codeProps}
           wrapLines
-          lineProps={(lineNumber) => {
+          lineProps={lineNumber => {
             const mergedLines = addLines
               .concat(removeLines)
               .concat(updateLines);
@@ -183,7 +185,7 @@ export class CodeBlock extends PureComponent<CodeblockProps, CodeblockState> {
 
         <div className="copy-to-clipboard">
           <CopyToClipboard text={value} onCopy={() => this.copyToClipboard()}>
-            <button type="button">
+            <button type="button" className="font-bold text-xs">
               {copiedToClipboard ? 'Copied ✔' : 'Copy'}
             </button>
           </CopyToClipboard>
