@@ -4,7 +4,9 @@ import ReactMarkdown from 'react-markdown';
 import Link from 'next/link';
 import ProgressBar from 'react-scroll-progress-bar';
 
+import { GetStaticPaths } from 'next';
 import { Layout, CodeBlock } from '@Components';
+import { getAllPosts, getPostBySlug } from 'utils/api';
 
 export const Writing = ({ content, data }) => {
   const frontmatter = data;
@@ -17,11 +19,13 @@ export const Writing = ({ content, data }) => {
       </div>
 
       <Layout secondaryPage noHead isHomepage={false}>
-        <div style={{ marginTop: 50 }}>
+        <div className="pt-6">
           <Link href="/" as="/">
             <a className="back-button">back</a>
           </Link>
-          <h1 className="writing-title-h1">{title}</h1>
+          <h1 className="text-6xl mb-20 mt-10 font-bold tracking-wide leading-normal">
+            {title}
+          </h1>
           <div className="writing-container">
             <ReactMarkdown
               source={content}
@@ -65,13 +69,42 @@ export const Writing = ({ content, data }) => {
   );
 };
 
-// TODO: UPDATE TO USE GETSTATICPROPS AND GETSTATICPATHS
-Writing.getInitialProps = async context => {
-  const { slug } = context.query;
-  const content = await import(`../../writings/${slug}.md`);
+export const getStaticProps = async ({ params }) => {
+  // TODO: fix overfetching
+  const post = getPostBySlug(params.slug, [
+    'title',
+    'date',
+    'slug',
+    'author',
+    'content',
+    'ogImage',
+    'coverImage',
+  ]);
+
+  const content = await import(`../../_blogs/${params.slug}.md`);
   const data = matter(content.default);
 
-  return { ...data };
+  return {
+    props: {
+      content: data.content,
+      data: { ...data.data },
+    },
+  };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const posts = getAllPosts(['slug']);
+
+  return {
+    paths: posts.map((post: any) => {
+      return {
+        params: {
+          slug: post.slug,
+        },
+      };
+    }),
+    fallback: false,
+  };
 };
 
 export default Writing;

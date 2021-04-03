@@ -1,65 +1,63 @@
-import Head from 'next/head';
-import * as styles from '../styles/globals.scss';
+import React from 'react';
+import matter from 'gray-matter';
+import Link from 'next/link';
 
-export default function Home() {
+import { Layout } from '@Components';
+import { getAllPosts } from 'utils/api';
+
+function formatDate(date) {
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+  };
+  const today = new Date(date);
+
+  return today.toLocaleDateString('en-US', options);
+}
+
+function freshWriting(date) {
+  const writingDate = new Date(date).getTime();
+  const today = new Date().getTime();
+
+  return today - writingDate < 60 * 60 * 1000 * 24 * 2; // 2 days old
+}
+
+function Homepage({ writings }) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <Layout isHomepage secondaryPage={false}>
+        <div className="w-full">
+          {writings.map(({ title, date, slug }) => {
+            return (
+              <div key={slug}>
+                <div className="writing-row" key={title}>
+                  <div>
+                    <div className="writing-date">{formatDate(date)}</div>
+                  </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+                  <Link href="/blog/[slug]" as={`/blog/${slug}`}>
+                    <a>
+                      {freshWriting(date) && <div className="pulse" />}
+                      <span className="writing-title">{title}</span>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      </Layout>
+    </>
   );
 }
+
+export const getStaticProps = async () => {
+  const writings = getAllPosts(['title', 'date', 'slug', 'author']);
+
+  return {
+    props: { writings },
+  };
+};
+
+export default Homepage;

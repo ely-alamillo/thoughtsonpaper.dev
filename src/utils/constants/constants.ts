@@ -6,7 +6,7 @@ export const PRESENT = [
   'Next.js',
   'Redux',
   'Gatsby',
-  'Zeit',
+  'Vercel',
   'Python',
   'PostgreSQL',
   'Apollo GraphQL',

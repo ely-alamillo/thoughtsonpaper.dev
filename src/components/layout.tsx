@@ -4,8 +4,6 @@ import React, {
   FunctionComponent,
   ReactNode,
 } from 'react';
-// TODO: MOVE TO TAILWIND
-import { Grid, Row, Col } from 'react-flexbox-grid';
 import { Moon, Zap } from 'react-feather';
 import Link from 'next/link';
 
@@ -63,68 +61,55 @@ export const Layout: FunctionComponent<LayoutProps> = ({
     setMounted(true);
   }, [theme]);
 
-  const containerProps = {
-    ...(isHomepage && { md: 12 }),
-    ...(!isHomepage && { md: 8, mdOffset: 2 }),
-  };
+  const layoutClasses = isHomepage
+    ? 'mx-auto w-full h-5/6'
+    : 'w-full sm:px-20 md:px-28 xl:px-80';
 
   if (!mounted) return <div />;
 
   return (
-    <>
-      <div className="top-menu">
-        <Row>
-          <Col xs={10}>
-            <ul>
-              TODO: add logo
-              {/* <li className="logo">
-                <Link href="/" as="/">
-                  <a>⧩</a>
+    <div className="mx-auto w-10/12 w:10/12 md:w-10/12 h-screen">
+      <div className="top-menu relative flex items-center justify-between h-16">
+        <div className="flex-1 flex sm:items-stretch sm:justify-start">
+          <ul className="list-none flex justify-start -ml-2.5">
+            {menu.map(({ path, name }) => (
+              <li key={name}>
+                <Link href={path} as={path}>
+                  <a>{name}</a>
                 </Link>
-              </li> */}
-
-              {menu.map(({ path, name }) => (
-                <li key={name}>
-                  <Link href={path} as={path}>
-                    <a>{name}</a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </Col>
-
-          <Col xs={2} style={{ textAlign: 'right' }}>
-            <button
-              type="button"
-              className="theme-switch-button"
-              onClick={() => switchTheme()}
-            >
-              {theme === 'dark' ? <Zap /> : <Moon />}
-            </button>
-          </Col>
-        </Row>
-      </div>
-
-      <Grid>
-        <Row>
-          <Col {...containerProps}>
-            {!secondaryPage && (
-              <h1
-                className="blog-title"
-                style={isHomepage && { textAlign: 'left' }}
-              >
-                thoughts on " paper "
-              </h1>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button
+            type="button"
+            className="theme-switch-button"
+            onClick={() => switchTheme()}
+          >
+            {theme === 'dark' ? (
+              <Zap />
+            ) : (
+              <Moon className="hover:animate-pulse" />
             )}
+          </button>
+        </div>
+      </div>
+      <div className={`${layoutClasses}`}>
+        {!secondaryPage && (
+          <h1
+            className="blog-title text-6xl mb-20 mt-20 font-bold tracking-wide"
+            style={isHomepage && { textAlign: 'left' }}
+          >
+            {'thoughts on paper'}
+          </h1>
+        )}
 
-            {children}
-          </Col>
-        </Row>
-      </Grid>
-
-      <footer>
+        {children}
+      </div>
+      <footer className="pt-14 pb-5">
         &copy; {new Date().getFullYear()} {' Ely Alamillo'}
       </footer>
-    </>
+    </div>
   );
 };
