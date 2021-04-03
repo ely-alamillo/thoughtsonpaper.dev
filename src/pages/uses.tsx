@@ -34,6 +34,7 @@ function Uses() {
             ))}
           </ul>
         ))}
+        <div className="pt-16" />
       </Layout>
     </>
   );
