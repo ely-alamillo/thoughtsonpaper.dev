@@ -53,14 +53,17 @@ export const Writing = ({ content, data }) => {
               }}
             />
 
-            <div className="twitter-follow">
-              If you have any questions feel free to find me on{' '}
-              <a
-                href="https://twitter.com/_elyalamillo"
-                rel="noopener noreferrer nofollow"
-              >
-                Twitter
-              </a>
+            <div className="pt-16">
+              <div className="twitter-follow">
+                Follow me on{' '}
+                <a
+                  href="https://twitter.com/_elyalamillo"
+                  rel="noopener noreferrer nofollow"
+                >
+                  Twitter
+                </a>{' '}
+                for more
+              </div>
             </div>
           </div>
         </div>
