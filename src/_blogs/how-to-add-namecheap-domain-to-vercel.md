@@ -5,7 +5,7 @@ author:
   twitter: 'botdev_'
   name: 'Ely Alamillo'
 og:
-  image: '/images/namecheap.png'
+  image: '/images/namecheapV2.png'
 ---
 
 ---
