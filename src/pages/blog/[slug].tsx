@@ -57,7 +57,7 @@ export const Writing = ({ content, data }) => {
               <div className="twitter-follow">
                 Follow me on{' '}
                 <a
-                  href="https://twitter.com/_elyalamillo"
+                  href="https://twitter.com/botdev_"
                   rel="noopener noreferrer nofollow"
                 >
                   Twitter

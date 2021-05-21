@@ -27,7 +27,7 @@ function Homepage({ writings }) {
   return (
     <>
       <Layout isHomepage secondaryPage={false}>
-        <div className="w-full">
+        <div className="w-full space-y-5">
           {writings.map(({ title, date, slug }) => {
             return (
               <div key={slug}>
