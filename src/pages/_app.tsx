@@ -25,15 +25,15 @@ function MyApp({ Component, pageProps }) {
         <meta
           property="og:image"
           content={
-            og ? `${SITE_URL}${og.image}` : `${SITE_URL}/og/page-card.png`
+            og ? `${SITE_URL}${og.image}` : `${SITE_URL}/og/page-cardV2.png`
           }
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@_elyalamillo" />
+        <meta name="twitter:site" content="@botdev_" />
         <meta
           name="twitter:image"
           content={
-            og ? `${SITE_URL}${og.image}` : `${SITE_URL}/og/page-card.png`
+            og ? `${SITE_URL}${og.image}` : `${SITE_URL}/og/page-cardV2.png`
           }
         />
 

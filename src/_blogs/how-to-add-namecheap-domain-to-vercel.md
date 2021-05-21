@@ -2,10 +2,10 @@
 title: 'How to add Namecheap domain to Vercel'
 date: '2021-04-02T22:37:19Z'
 author:
-  twitter: '_elyalamillo'
+  twitter: 'botdev_'
   name: 'Ely Alamillo'
 og:
-  image: '/images/namecheap.png'
+  image: '/images/namecheapV2.png'
 ---
 
 ---
