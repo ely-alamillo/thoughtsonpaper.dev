@@ -29,7 +29,7 @@ Amplify provides a zero config deploy similar to vercel, which allows us to conn
 
 ![Host web app](/images/next-amplify/web_app.png)
 ##### Select git provider
-We can now select our preffered git provider such as Github for this example.
+We can now select our preferred git provider such as Github for this example.
 ![Select a git provider](/images/next-amplify/select_git.png)
 ##### Add repo branch
 After selecting our desired git provider we can select which branch we would like to deploy from.
