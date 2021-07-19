@@ -8,13 +8,13 @@ import { CoyWithoutShadows } from 'utils/syntax-highlighters';
 const preStyle = {
   borderRadius: 6,
   padding: '1.7em',
-  lineHeight: '2.3em',
+  // lineHeight: '2.3em',
 };
 
 const codeProps = {
   style: {
     fontFamily: `ibm-plex-mono, Consolas, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New'`,
-    fontSize: '18.5px',
+    fontSize: '16px',
   },
 };
 
@@ -46,7 +46,6 @@ export class CodeBlock extends PureComponent<CodeblockProps, CodeblockState> {
   }
 
   componentDidMount() {
-    console.log(this.props);
     const { language } = this.props;
     const linesObj = language && language.split(':')[1];
 
